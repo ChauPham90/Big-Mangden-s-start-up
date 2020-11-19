@@ -12,8 +12,17 @@ const Menu = ({ history }) => (
   <div>
     <Nav variant="pills">
       <Nav.Item>
-        <Nav.Link href="/" eventKey="link-1" style={isActive(history, "/home")}>
+        <Nav.Link href="/" eventKey="link-1" style={isActive(history, "/")}>
           Home
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link
+          href="/dashboard"
+          eventKey="link-1"
+          style={isActive(history, "/dashboard")}
+        >
+          Dash board
         </Nav.Link>
       </Nav.Item>
       {!isAuth() && (
